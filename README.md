@@ -1,13 +1,13 @@
-# Local Testing Demo
+# Snowpark Testing Tutorial
 
 ## Setup
 
-1. Fork this repo and clone it locally
+1. Clone or download this repository
 1. Create conda env:
 
     ```
     conda env create -f environment.yml
-    conda activate snowpark-local-test-ff
+    conda activate snowpark-testing
     ```
 
 2. Set your account credentials:
@@ -22,22 +22,3 @@
     export SNOWSQL_SCHEMA=<replace with your schema>
     export SNOWSQL_WAREHOUSE=<replace with your warehouse>
     ```
-
-## Run demo
-
-### Run tests with local testing
-
-```bash
-pytest --snowflake-session local
-```
-
-#### Run tests with a live connnection
-
-```bash
-pytest
-```
-
-#### Showcase GitHub Actions
-
-1. Open a pull request on **your** fork of the repo (not the upstream)
-1. Go to your repository on GitHub.com and click "Actions" to see the actions execution
