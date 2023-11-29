@@ -2,7 +2,9 @@ from project.sproc import create_fact_tables
 from snowflake.snowpark.types import *
 
 
-def test_create_fact_tables(session):
+def test_create_fact_tables(request, session):
+    if request.config.getoption('--snowflake-session') == 'local':
+        from patches import patch_monthname
     DB = 'CITIBIKE'
     SCHEMA = 'TEST'
     TABLE = 'TRIPS_TEST'
