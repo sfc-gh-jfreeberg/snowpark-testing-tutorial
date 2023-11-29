@@ -11,3 +11,4 @@ def session(request) -> Session:
         return Session.builder.config('local_testing', True).create()
     else:
         return Session.builder.configs(get_env_var_config()).create()
+
