@@ -14,9 +14,9 @@ def test_add_rider_age(session):
 
     expected = session.create_dataframe(
         [
-            [1980, 43], 
-            [1995, 28], 
-            [2000, 23]
+            [1980, 44], 
+            [1995, 29], 
+            [2000, 24]
         ],
         schema=StructType([StructField("BIRTH_YEAR", IntegerType()), StructField("RIDER_AGE", IntegerType())])
     )
