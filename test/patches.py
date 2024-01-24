@@ -1,6 +1,5 @@
-from snowflake.snowpark.mock.functions import patch
 from snowflake.snowpark.functions import monthname
-from snowflake.snowpark.mock.snowflake_data_type import ColumnEmulator, ColumnType
+from snowflake.snowpark.mock import patch, ColumnEmulator, ColumnType
 from snowflake.snowpark.types import StringType
 import datetime
 import calendar
