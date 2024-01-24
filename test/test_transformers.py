@@ -56,7 +56,7 @@ def test_calc_bike_facts(session):
 
 
 def test_calc_month_facts(request, session):
-    if request.config.getoption('--snowflake-session') == 'local':
+    if request.config.getoption('--snowflake-session', default=None) == 'local':
         from patches import patch_monthname
 
     input = session.create_dataframe(

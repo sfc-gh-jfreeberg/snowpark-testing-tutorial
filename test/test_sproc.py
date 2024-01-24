@@ -3,7 +3,7 @@ from snowflake.snowpark.types import *
 
 
 def test_create_fact_tables(request, session):
-    if request.config.getoption('--snowflake-session') == 'local':
+    if request.config.getoption('--snowflake-session', default=None) == 'local':
         from patches import patch_monthname
     DB = 'CITIBIKE'
     SCHEMA = 'TEST'
